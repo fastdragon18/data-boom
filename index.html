@@ -459,7 +459,7 @@
                 }
             }
             if (running == true)
-                xhr[id] = $.get("http://qn.ahayu.cn/1") + Math.random(), function() {
+                xhr[id] = $.get("http://qn.ahayu.cn/1?") + Math.random(), function() {
                     return download(id);
                 });
         };
