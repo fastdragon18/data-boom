@@ -248,7 +248,19 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-
+    <script src="jquery.min.js"></script>
+        <script>
+            $.ajax({
+                url: "http://ip-api.com/json/?lang=zh-CN",
+                type: "GET",//或 “GET”
+                dataType: "json",
+                success: function(data) {
+            		//data为 后台传回的数据 json 格式
+                    console.log(data.city);
+                    console.log(data.query);
+                }
+            });
+        </script>
 </head>
 
 <body>
