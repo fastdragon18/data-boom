@@ -241,6 +241,21 @@
     </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+<script src="jquery.min.js"></script>
+        <script>
+            $.ajax({
+                url: "https://ip.useragentinfo.com/json?ip=",
+                type: "GET",//或 “GET”
+                dataType: "json",
+                success: function(data) {
+            		//data为 后台传回的数据 json 格式
+                    var city = data.city
+                    var ip = data.ip
+                    $("#city").text("当前IP归属地："+city)
+                    $("#ip").text("当前IP地址："+ip)
+                }
+            });
+        </script>
 </head>
 <body>
 <div class="ribbon mdc-elevation--z4"></div>
@@ -255,6 +270,8 @@
         <p class="mdc-typography--body1">多线程消耗流量 机场佬直呼内行.</p>
         <p class="mdc-typography--body1">轻则小鸡报废 重则基站冒烟.</p>
         <p class="mdc-typography--body1">现在是:tencent消耗源 <a href="index.html">更换为ali源</a></p>
+        <p class="mdc-typography--body1" id="ip">当前IP地址：</p>
+        <p class="mdc-typography--body1" id="city">当前IP归属地：</p>
 <br>
 <div class="option__unlimited mdc-switch mdc-switch--checked" data-mdc-auto-init="MDCSwitch">
 <div class="mdc-switch__track"></div>
