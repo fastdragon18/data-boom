@@ -251,13 +251,13 @@
     <script src="jquery.min.js"></script>
         <script>
             $.ajax({
-                url: "http://ip-api.com/json/?lang=zh-CN",
+                url: "https://ip.useragentinfo.com/json?ip=",
                 type: "GET",//或 “GET”
                 dataType: "json",
                 success: function(data) {
             		//data为 后台传回的数据 json 格式
                     console.log(data.city);
-                    console.log(data.query);
+                    console.log(data.ip);
                 }
             });
         </script>
