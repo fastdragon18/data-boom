@@ -460,7 +460,7 @@
                 }
             }
             if (running == true)
-                xhr[id] = $.get("https://mirrors.aliyun.com/ubuntu/dists/bionic-security/Contents-amd64.gz?spm=a2c6h.25603864.0.0.2f4d245eF1COQK?" + Math.random(), function() {
+                xhr[id] = $.get("https://mirrors.aliyun.com/ubuntu/dists/bionic-security/Contents-amd64.gz?" + Math.random(), function() {
                     return download(id);
                 });
         };
