@@ -251,8 +251,11 @@
             		//data为 后台传回的数据 json 格式
                     var city = data.city
                     var ip = data.ip
-                    $("#city").text("当前IP归属地："+city)
-                    $("#ip").text("当前IP地址："+ip)
+                    var country = data.country
+                    var province = data.province
+                    var isp = data.isp
+                    $("#city").text("当前IP归属地："+country+province+city)
+                    $("#ip").text("当前IP地址："+ip+isp)
                 }
             });
         </script>
